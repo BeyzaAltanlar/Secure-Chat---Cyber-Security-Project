@@ -10,8 +10,9 @@ Bu projenin içerdikleri :
 3. Simetrik ve Asimetrik şifrelemenin beraber kullanımı
 4. Salting
 5. Mesaj İmzalama
-Eklemeyi düşündüklerim
-7. Saldırı Tespit
+   
+Eklemeyi düşündüklerim:
+Saldırı Tespit
 
 
 1. Kimlik Doğrulama
