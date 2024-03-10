@@ -13,6 +13,7 @@ Bu projenin içerdikleri :
 Eklemeyi düşündüklerim
 7. Saldırı Tespit
 
+
 1. Kimlik Doğrulama
 Kullanıcı Kaydı Oluşturma (register_user fonksiyonu):
 Kullanıcı, kullanıcı adı ve şifresiyle birlikte sisteme kayıt olur.
@@ -26,6 +27,7 @@ Kullanıcı, kullanıcı adı ve şifresiyle giriş yapmaya çalışır.
 Girilen kullanıcı adı ve şifre, dosyadaki kayıtlarla karşılaştırılır.
 Tuz kullanılarak girilen şifre ile kaydedilmiş şifre karşılaştırılır. Eğer eşleşirse, kimlik
 doğrulama başarılı kabul edilir.
+
 2.Anahtar Yönetimi
 Mesaj içeriği, AES (Advanced Encryption Standard) simetrik şifreleme algoritması ile
 şifrelenir. Anahtar oluşturulurken os.urandom(32) kullanılarak rastgele bir 256-bit (32 byte)
@@ -40,11 +42,13 @@ Simetrik anahtarın güvenli bir şekilde iletilmesi için, bu anahtar RSA asime
 algoritması kullanılarak şifrelenir. Bu işlemde, özel anahtar ile şifrelenen simetrik anahtar,
 sadece karşı tarafın genel anahtarı ile çözülebilir. Bu yöntem, anahtarın güvenli bir şekilde
 iletilmesini sağlar.
+
 3.Simetrik ve Asimetrik Şifrelemenin Beraber Kullanımı
 Simetrik şifreleme (AES) ve asimetrik şifreleme (RSA) algoritmaları bir arada kullanılarak
 güvenli bir iletişim sağlanmaktadır. Simetrik şifreleme, verilerin hızlı bir şekilde şifrelenip
 çözülmesine olanak tanırken, asimetrik şifreleme ise anahtar değişimini güvenli bir şekilde
 gerçekleştirmeye olanak tanır. Güvenliliği artırmak için ikisi de kullanıldı
+
 4. Salting
 Projede Parola güvenliği için salting yöntemi de ek olarak kullanılmıştır. Parola türetme
 işlemleri sırasında salting, kötü niyetli kişilerin önceden hesaplanmış "rainbow table"
@@ -55,6 +59,7 @@ Her kullanıcının tuzu farklıdır, bu da her kullanıcının parola türetme 
 farklı bir türetilmiş anahtara sahip olacağı anlamına gelir. Salting kullanarak, projedeki parola
 güvenliğinin artırılması hedeflenmiştir. Bu kombinasyon, yüksek güvenlik düzeyi ve hızlı veri
 iletimi sağladı.
+
 5. Mesaj İmzalama
 Mesaj imzalama işlemi, mesajın gönderen tarafından doğrulandığını garantiler. Projede, özel
 anahtar kullanılarak mesajlar imzalanır ve alıcı tarafında bu imza, gönderenin kimliğini
